@@ -54,6 +54,9 @@ class BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
+    if (_products.isEmpty) {
+      return CircularProgressIndicator();
+    }
     return ListView(
       children: <Widget>[
         buildSearch(),
